@@ -1,5 +1,7 @@
 package com.example.android.sunshine;
 
+import android.content.Intent;
+import android.media.audiofx.BassBoost;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,8 +24,15 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id= item.getItemId();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         switch(id) {
-            case R.id.
+            case android.R.id.home: {
+                onBackPressed();
+                break;
+            }
         }
+
+        return super.onOptionsItemSelected(item);
+
     }
 }
